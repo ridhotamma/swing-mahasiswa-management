@@ -1,0 +1,17 @@
+CREATE DATABASE db_2311510123;
+
+USE db_2311510123;
+
+CREATE TABLE Prodi (
+    Prodi VARCHAR(2) PRIMARY KEY,
+    Nama_Prodi VARCHAR(100)
+);
+
+CREATE TABLE Mahasiswa (
+    Nim CHAR(10) PRIMARY KEY,
+    Nama VARCHAR(30),
+    Alamat VARCHAR(200),
+    Telepon VARCHAR(15),
+    Prodi VARCHAR(2),
+    FOREIGN KEY (Prodi) REFERENCES Prodi(Prodi)
+);
